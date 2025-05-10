@@ -1,56 +1,60 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Halaman Biodata Sederhana</title>
-    </head>
-    <style>
-        body {
-      background-color: #e6f0ff; /* Warna background */
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Halaman Biodata Sederhana</title>
+  <style>
+    .container {
+      background-color: #e6f0ff;
       font-family: Arial, sans-serif;
       padding: 30px;
       color: #333;
+      display: flex;
     }
 
-    h1 {
-      font-size: 36px; /* Ukuran judul */
+    .judul {
+      font-size: 36px;
       margin-bottom: 20px;
       text-align: center;
       color: #1a237e;
     }
 
-    p {
-      font-size: 18px; /* Ukuran paragraf */
+    .deskripsi {
+      font-size: 18px;
       margin-bottom: 25px;
       line-height: 1.6;
       text-align: justify;
     }
 
-    img {
+    .foto {
       display: block;
       max-width: 100%;
       margin: 0 auto 30px auto;
-      border: 5px solid #1e88e5; /* Border pada gambar */
+      border: 5px solid #1e88e5;
       border-radius: 10px;
     }
 
-    form {
+    .formulir {
       background-color: #fff;
       padding: 20px;
       margin-top: 30px;
-      border: 2px solid #90caf9; /* Border pada form */
+      border: 2px solid #90caf9;
       border-radius: 10px;
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    label {
+    .formulir label {
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
     }
 
-    input, textarea {
+    .formulir input,
+    .formulir textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -59,7 +63,7 @@
       font-size: 16px;
     }
 
-    button {
+    .tombol-kirim {
       background-color: #1e88e5;
       color: white;
       padding: 10px 20px;
@@ -69,24 +73,39 @@
       cursor: pointer;
     }
 
-    button:hover {
+    .tombol-kirim:hover {
       background-color: #1565c0;
     }
-    </style>
-    <body>
-        <h1>Biodata Pribadi</h1>
-        <p>Mahasiswa Semester 2 Jurusan Sistem Informasi</p>
-        <img src="foto.jpeg" alt="foto saya"width="150">
-        <p>Nama:Nopitasari</p>
-        <P>Email:inamilna69@gmail.com</P>
-        <p>Telepon:081917524645</p>
-        <p>github <a href="https://github.com/nopita1911/BIODATA-HTML.git" target="_blank">https://github.com/nopita1911/HTML</a></p>
-        <form >Hubungi Saya</form>
-            <label>Nama: <input type="text"></label><br />
-            <label >Email: <input type="email"></label><br />
-            <label >telepon: <input type="namber"></label>
-            <button type="submit">kirim</button><br />
-        </form>
 
-    </body>
+    @media (max-width:768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <h1 class="judul">Biodata Pribadi</h1>
+      <p class="deskripsi">Mahasiswa Semester 2 Jurusan Sistem Informasi</p>
+      <img class="foto" src="foto.jpeg" alt="foto saya" width="150">
+      <p class="deskripsi">Nama: Nopitasari</p>
+      <p class="deskripsi">Email: inamilna69@gmail.com</p>
+      <p class="deskripsi">Telepon: 081917524645</p>
+      <p class="deskripsi">GitHub: <a href="https://github.com/nopita1911/BIODATA-HTML.git"
+          target="_blank">https://github.com/nopita1911/HTML</a></p>
+    </div>
+
+    <div class="right">
+      <form class="formulir">
+        <label>Nama: <input type="text"></label>
+        <label>Email: <input type="email"></label>
+        <label>Telepon: <input type="number"></label>
+        <button class="tombol-kirim" type="submit">Kirim</button>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
